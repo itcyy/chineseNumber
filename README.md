@@ -5,7 +5,7 @@
 
 ## 安装golang库
 ```bash
- go get -u github.com/itcyy/ChineseNumber
+ go get -u github.com/itcyy/chineseNumber
 ```
 
 ## 使用
