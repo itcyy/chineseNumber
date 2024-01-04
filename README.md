@@ -7,7 +7,6 @@
 ```bash
  go get -u github.com/itcyy/chineseNumber
 ```
-
 ## 使用
 ```go
 func NumberToChinese(num int64) string {
