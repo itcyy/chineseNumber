@@ -4,11 +4,6 @@
 // @Time: 2024/1/4 13:48
 package ChineseNumber
 
-import (
-	"fmt"
-	"strconv"
-)
-
 // 数字
 var chnNumChar = [10]string{"零", "一", "二", "三", "四", "五", "六", "七", "八", "九"}
 
@@ -27,29 +22,6 @@ type chnNameValue struct {
 // 权位于结点的关系
 var chnValuePair = []chnNameValue{{"十", 10, false}, {"百", 100, false}, {"千", 1000, false}, {"万", 10000, true}, {"亿", 100000000, true}}
 
-func main() {
-	for {
-		var typeStr string
-		var scanStr string
-
-		fmt.Println("1 阿拉伯转中文数字 2 中文数字转阿拉伯数字")
-		fmt.Println("请输入")
-
-		//fmt.Scanf("%s", &a)
-		fmt.Scan(&typeStr)
-
-		fmt.Println("请输入要转换的内容")
-		fmt.Scan(&scanStr)
-		if typeStr == "1" {
-			num, _ := strconv.ParseInt(scanStr, 10, 64)
-			var chnStr = numberToChinese(num)
-			fmt.Println(chnStr)
-		} else {
-			var numInt = chineseToNumber(scanStr)
-			fmt.Println(numInt)
-		}
-	}
-}
 func NumberToChinese(num int64) string {
 	return numberToChinese(num)
 }
